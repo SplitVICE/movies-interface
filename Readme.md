@@ -2,7 +2,7 @@
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
 [![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
 # Description
-Movies interface is a tiny web server piece of software which will allow you to stream a videos stored in your computer on local network.
+Movies interface is a tiny web server piece of software which will allow you to stream videos stored in your computer on local network.
 # Technical specs
 Movies interface is written in PHP and has a Apache web server dependecy to work. You must install this software by your own by installing Apache2 software or XAMPP.
 # Setup
