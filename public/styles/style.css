@@ -1,0 +1,34 @@
+.load_list_again_ahref{margin:40px;}
+video{width:1000px;}
+body{background-image:url("../img/texture.png");}
+*{font-family:"Comic Sans MS", cursive, sans-serif;}
+.movie_ahref{font-size:30px;}
+.movie_line{margin-bottom:35px;}
+.list_container{border:2px solid rgb(255, 191, 254);border-radius:5px;padding:40px;}
+.list_controller_container{margin:auto;width:50%;}
+header{font-size:30px;}
+.center{text-align:center;}
+@media only screen and (max-width:976px){.list_container{border-radius:5px;padding:20px;}
+ .list_controller_container{margin:auto;width:75%;}
+}
+@media only screen and (max-width:500px){.movie_ahref{font-size:20px;}
+}
+@media only screen and (max-width:470px){.list_container{border-radius:5px;padding:20px;}
+ .list_controller_container{width:100%;}
+ header{font-size:20px;}
+}
+@media only screen and (max-width:400px){.list_container{border-radius:12px;padding:20px;border:2px solid rgb(255, 191, 254);}
+ .list_controller_container{width:100%;}
+ header{font-size:20px;}
+}
+@media only screen and (max-width:1018px){video{width:700px;}
+}
+@media only screen and (max-width:713px){video{width:540px;}
+ header{font-size:24px;}
+}
+@media only screen and (max-width:513px){video{width:340px;}
+ header{font-size:17px;}
+}
+@media only screen and (max-width:400px){video{width:100%;}
+ header{font-size:13px;}
+}
