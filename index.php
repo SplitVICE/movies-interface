@@ -1,6 +1,4 @@
-<?php
-include './public/php/app.php';
-?>
+<?php include './app/index.php'; ?>
 <!DOCTYPE html>
 
 <head>
@@ -17,30 +15,23 @@ include './public/php/app.php';
         <h1><?php echo $INI_VARIABLES_ARRAY['INDEX_TITLE'] ?></h1>
     </header>
 
-    <!-- JavaScript will render the content of the page here. -->
-    <div id="main_content">
+    <div id="main_content"></div>
 
-    </div>
+    <footer>
+        <a target="_blank" href="https://github.com/justvice/movies-interface">Source code</a> - <a href="http://just-vice.com/technology/web-software/movies-interface/" target="_blank">Movies Interface website</a><br><br>Made by JUST VICE - MIT License - v1.1.0
+    </footer>
 
     <script>
         try {
-            // These variables are created at app.js file.
-            // These variables will be filled with the backend response of the movies list.
             movies_names_array = <?php echo json_encode($movies_names_array); ?>;
             movies_folder_path = <?php echo json_encode($movies_folder_path); ?>;
             button_to_reload_movies_list_text = <?php echo json_encode($button_to_reload_movies_list_text) ?>;
-
-            // Main function to render the frontend. Function contained inside app.js .
+            download_movie_text = <?php echo json_encode($download_movie_text) ?>;
             main();
         } catch (error) {
-            // If there is a frontend error, this <h1> tag will be added at the header of the page.
-            document.getElementsByTagName('header')[0].innerHTML = '<h1>A JS error has occurred.</h1>';
-            console.log(error);
+            document.getElementsByTagName('header')[0].innerHTML = '<h1>A JavaScript error has occurred. ' + error + '</h1>';
         }
     </script>
-    <footer>
-        Made by VICE
-    </footer>
 </body>
 
 </html>

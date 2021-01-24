@@ -8,6 +8,7 @@ body{background-image:url("../img/texture.png");}
 .list_controller_container{margin:auto;width:50%;}
 header{font-size:30px;}
 .center{text-align:center;}
+footer{margin-top: 18px;font-size: 14px;}
 @media only screen and (max-width:976px){.list_container{border-radius:5px;padding:20px;}
  .list_controller_container{margin:auto;width:75%;}
 }
