@@ -46,4 +46,9 @@ Example of MOVIES_FOLDER route:
 ```
 MOVIES_FOLDER = '../../Documents/Movies/'
 ```
+# Adding movies to Movies Interface
+To add more vide to the software just drag them to the folder indicated in the ```config.ini``` file.
+
+By default, this folder is the folder called ```movies``` inside Movies Interface folder. You will find a demo video called ```Demo.mp4``` for testing purposes.
+
 Have fun!
