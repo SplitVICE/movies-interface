@@ -16,9 +16,9 @@ function render_index_html() {
 function render_movie_list_holder() {
     let html_content =
         `<div class="list_controller_container">
-        <div class="list_container" id="list_container_id">
-        </div>
-    </div>`;
+            <div class="list_container" id="list_container_id">
+            </div>
+        </div>`;
     document.getElementById("main_content").innerHTML = html_content;
 }
 
