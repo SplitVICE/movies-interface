@@ -1,9 +1,8 @@
-[![N|Solid](https://dl.dropboxusercontent.com/s/4rkbkdirpmjdc81/viceReadmeMDImage.png?dl=0)](https://justvice.github.io)
+[![N|Solid](https://dl.dropboxusercontent.com/s/oy06v7r8d871cr8/splitvice-banner.png?dl=0)](http://split-vice.com)
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
-[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
 # Description
 Movies Interface is a tiny software for web server which allows you to stream videos stored on your computer on the local network.
-[Oficial website](http://just-vice.com/technology/web-software/movies-interface/)
+[Oficial website](http://split-vice.com/technology/web-software/movies-interface/)
 
 ![Movies Interface demo](https://dl.dropboxusercontent.com/s/gbdnxcu8zzwnf2s/movies-interface-demo.png?dl=0)
 # Technical specs

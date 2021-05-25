@@ -18,7 +18,7 @@
     <div id="main_content"></div>
 
     <footer>
-        <a target="_blank" href="https://github.com/justvice/movies-interface">Source code</a> - <a href="http://just-vice.com/technology/web-software/movies-interface/" target="_blank">Movies Interface website</a><br><br>Made by JUST VICE - MIT License - v1.1.0
+        <a target="_blank" href="https://github.com/splitvice/movies-interface">Source code</a> - <a href="http://split-vice.com/technology/web-software/movies-interface/" target="_blank">Movies Interface website</a><br><br>Made by SPLIT VICE - MIT License - v1.2.1
     </footer>
 
     <script>
