@@ -40,14 +40,14 @@ MOVIES_FOLDER = './movies' // Route to videos folder.
 INDEX_TITLE = 'Movies interface' // Title that will be shown at the main page.
 BUTTON_TO_RELOAD_MOVIES_LIST_TEXT = 'Back to movies list.' // Clickable label to go back to videos list.
 ```
-If you want to set a different location for the movies folder, it must be reached by navigating from the project root path.
+If you want to set a different location for the movies folder, it must be reached by navigating from the project root path (relative path).
 Example of MOVIES_FOLDER route:
 ```
 MOVIES_FOLDER = '../../Documents/Movies/'
 ```
 # Adding movies to Movies Interface
-To add more vide to the software just drag them to the folder indicated in the ```config.ini``` file.
+To add more movies to the web app just drag them to the folder indicated in the ```config.ini``` file.
 
-By default, this folder is the folder called ```movies``` inside Movies Interface folder. You will find a demo video called ```Demo.mp4``` for testing purposes.
+By default the movies folder is the directory called ```movies``` inside root Movies Interface folder. You will find a demo video called ```Demo.mp4``` for testing purposes.
 
 Have fun!

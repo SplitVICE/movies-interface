@@ -14,11 +14,11 @@
     <header>
         <h1><?php echo $INI_VARIABLES_ARRAY['INDEX_TITLE'] ?></h1>
     </header>
-
+    <input type="text" placeholder="Search movie" id="search">
     <div id="main_content"></div>
 
     <footer>
-        <a target="_blank" href="https://github.com/splitvice/movies-interface">Source code</a> - <a href="http://split-vice.com/technology/web-software/movies-interface/" target="_blank">Movies Interface website</a><br><br>Made by SPLIT VICE - MIT License - v1.2.1
+        <a target="_blank" href="https://github.com/splitvice/movies-interface">Source code</a> - <a href="http://split-vice.com/technology/web-software/movies-interface/" target="_blank">Movies Interface website</a><br><br>Made by SPLIT VICE - MIT License - v1.3.0
     </footer>
 
     <script>

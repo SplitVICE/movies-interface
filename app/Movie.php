@@ -2,7 +2,6 @@
 class Movie
 {
     public $Name;
-    public $Folder;
 
     function set_name($name)
     {

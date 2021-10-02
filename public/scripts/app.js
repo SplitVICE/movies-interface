@@ -23,16 +23,18 @@ function render_movie_list_holder() {
 }
 
 //Renders the list of movies on the HTML.
-function render_movies_list() {
+function render_movies_list(filter) {
     let html_content = "";
-    for (let i = 0; i < movies_names_array.length; i++) {
+    let movies_names_array_temp = [];
+    filter == null ? movies_names_array_temp = movies_names_array : movies_names_array_temp = filter;
+    for (let i = 0; i < movies_names_array_temp.length; i++) {
         html_content += `
             <div class="movie_line">
                 <div class="movie_ahref">
-                    <a id="${movies_names_array[i].Name}" 
-                    onclick="render_movie_to_see('${movies_names_array[i].Name}')" 
+                    <a id="${movies_names_array_temp[i].Name}"
+                    onclick="render_movie_to_see('${movies_names_array_temp[i].Name}')"
                     href="#">
-                        ${movies_names_array[i].Name}
+                        ${movies_names_array_temp[i].Name}
                     </a>
                 </div>
             </div>`
@@ -89,4 +91,20 @@ function movieCompatible(movie_name) {
         });
     }
     return status;
+}
+
+// Search system
+window.onload = () => {
+    document.getElementById('search').addEventListener("keyup", e => {
+        if (movies_names_array.length == 0) { return; }
+        const input = document.getElementById('search').value;
+        if(input == '') { render_movies_list(null); return; }
+        const filtered_movies = [];
+        for (let i = 0; i < movies_names_array.length; i++) {
+            if (movies_names_array[i].Name.toLowerCase().includes(input)) {
+                filtered_movies.push(movies_names_array[i]);
+            }
+        }
+        render_movies_list(filtered_movies);
+    });
 }
