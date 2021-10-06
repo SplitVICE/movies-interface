@@ -10,6 +10,7 @@ function main() {
 function render_index_html() {
     render_movie_list_holder();
     render_movies_list();
+    search();
 }
 
 //Renders movies box container on the HTML.
@@ -33,7 +34,7 @@ function render_movies_list(filter) {
                 <div class="movie_ahref">
                     <a id="${movies_names_array_temp[i].Name}"
                     onclick="render_movie_to_see('${movies_names_array_temp[i].Name}')"
-                    href="#">
+                    href="javascript:void(0)">
                         ${movies_names_array_temp[i].Name}
                     </a>
                 </div>
@@ -51,7 +52,7 @@ function render_movie_to_see(movie_name) {
     <hr>
     <a href="${movies_folder_path + bar + movie_name}" download>${download_movie_text}</a>
     <hr>
-    <a href="#" onclick="render_index_html()">
+    <a href="javascript:void(0)" onclick="render_index_html()">
         ${button_to_reload_movies_list_text}
     </a>`;
     document.getElementById("main_content").innerHTML = html_content;
@@ -94,17 +95,17 @@ function movieCompatible(movie_name) {
 }
 
 // Search system
-window.onload = () => {
-    document.getElementById('search').addEventListener("keyup", e => {
-        if (movies_names_array.length == 0) { return; }
-        const input = document.getElementById('search').value;
-        if(input == '') { render_movies_list(null); return; }
-        const filtered_movies = [];
-        for (let i = 0; i < movies_names_array.length; i++) {
-            if (movies_names_array[i].Name.toLowerCase().includes(input)) {
-                filtered_movies.push(movies_names_array[i]);
-            }
+window.onload = () => { document.getElementById('search').addEventListener("keyup", e => { search(); }); }
+
+function search() {
+    if (movies_names_array.length == 0) { return; }
+    const input = document.getElementById('search').value.trim().toLowerCase();
+    if (input == '') { render_movies_list(null); return; }
+    const filtered_movies = [];
+    for (let i = 0; i < movies_names_array.length; i++) {
+        if (movies_names_array[i].Name.toLowerCase().includes(input)) {
+            filtered_movies.push(movies_names_array[i]);
         }
-        render_movies_list(filtered_movies);
-    });
+    }
+    render_movies_list(filtered_movies);
 }
