@@ -1,60 +1,90 @@
-// Holds information from server.
+// Holds information from server
 let movies_folder_path, movies_names_array, button_to_reload_movies_list_text, download_movie_text;
 
-// Main function that triggers engine.
+// Main function that triggers engine
 function main() {
     render_index_html();
 }
 
-//Renders index page.
+//Renders index page
 function render_index_html() {
-    render_movie_list_holder();
+    render_movies_list_box();
     render_movies_list();
     search();
 }
 
-//Renders movies box container on the HTML.
-function render_movie_list_holder() {
-    let html_content =
-        `<div class="list_controller_container">
-            <div class="list_container" id="list_container_id">
-            </div>
+//Renders movies box container on the HTML
+function render_movies_list_box() {
+    let html_content = /* html */
+        `<div class="movie_list_box" id="movie_list_box_id">
+            <div id="movie_column_1"></div>
+            <div id="movie_column_2"></div>
+            <div id="movie_column_3"></div>
         </div>`;
     document.getElementById("main_content").innerHTML = html_content;
 }
 
-//Renders the list of movies on the HTML.
+//Renders the list of movies on the HTML
 function render_movies_list(filter) {
-    let html_content = "";
+    let movie_column_1_content = "", movie_column_2_content = "", movie_column_3_content = "";
     let movies_names_array_temp = [];
+    let counter = 0;
     filter == null ? movies_names_array_temp = movies_names_array : movies_names_array_temp = filter;
     for (let i = 0; i < movies_names_array_temp.length; i++) {
-        html_content += `
-            <div class="movie_line">
-                <div class="movie_ahref">
+
+        if (counter == 0) {
+            movie_column_1_content += `
+                <div class="movie_link">
                     <a id="${movies_names_array_temp[i].Name}"
                     onclick="render_movie_to_see('${movies_names_array_temp[i].Name}')"
                     href="javascript:void(0)">
                         ${movies_names_array_temp[i].Name}
                     </a>
-                </div>
-            </div>`
+                </div>`
+        }
+
+        if (counter == 1) {
+            movie_column_2_content += `
+                <div class="movie_link">
+                    <a id="${movies_names_array_temp[i].Name}"
+                    onclick="render_movie_to_see('${movies_names_array_temp[i].Name}')"
+                    href="javascript:void(0)">
+                        ${movies_names_array_temp[i].Name}
+                    </a>
+                </div>`
+        }
+
+        if (counter == 2) {
+            movie_column_3_content += `
+                <div class="movie_link">
+                    <a id="${movies_names_array_temp[i].Name}"
+                    onclick="render_movie_to_see('${movies_names_array_temp[i].Name}')"
+                    href="javascript:void(0)">
+                        ${movies_names_array_temp[i].Name}
+                    </a>
+                </div>`
+        }
+
+        counter++;
+        if (counter == 3) counter = 0;
     }
-    document.getElementById("list_container_id").innerHTML = html_content;
+    document.getElementById("movie_column_1").innerHTML = movie_column_1_content;
+    document.getElementById("movie_column_2").innerHTML = movie_column_2_content;
+    document.getElementById("movie_column_3").innerHTML = movie_column_3_content;
 }
 
-//Renders on the HTML the selected.
+//Renders on the HTML the selected
 function render_movie_to_see(movie_name) {
     let bar = "/";
-    let html_content = `
-    <h1>${movie_name}</h1>
-    ${movieCompatible(movie_name) ? renderMovieCompatible(movie_name, bar) : renderMovieNotCompatible()}
-    <hr>
-    <a href="${movies_folder_path + bar + movie_name}" download>${download_movie_text}</a>
-    <hr>
-    <a href="javascript:void(0)" onclick="render_index_html()">
-        ${button_to_reload_movies_list_text}
-    </a>`;
+    let html_content = /* html */`
+    <div class="watching-movie-box">
+        <div class="movie-name">${movie_name}</div>
+        ${movieCompatible(movie_name) ? renderMovieCompatible(movie_name, bar) : renderMovieNotCompatible()}
+        <div class="watching-movie-buttons-container">
+            <a class="watching-movie-button" href="${movies_folder_path + bar + movie_name}" download>${download_movie_text}</a>
+            <a class="watching-movie-button" href="javascript:void(0)" onclick="render_index_html()">${button_to_reload_movies_list_text}</a>
+        </div>
+    </div>`;
     document.getElementById("main_content").innerHTML = html_content;
 }
 

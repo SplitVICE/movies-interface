@@ -7,18 +7,25 @@
     <title>Movies Interface</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="public/styles/style.css">
+    <link rel="stylesheet" href="public/styles/watch.css">
+
     <script src="public/scripts/app.js"></script>
 </head>
 
-<body class="center">
+<body>
+
     <header>
-        <h1><?php echo $INI_VARIABLES_ARRAY['INDEX_TITLE'] ?></h1>
+        <div class="title"><?php echo $INI_VARIABLES_ARRAY['INDEX_TITLE'] ?></div>
+        <div class="search-box">
+            <img class="search-icon" src="./public/img/search-icon.svg" alt="">
+            <input type="text" placeholder="Search movie" id="search">
+        </div>
     </header>
-    <input type="text" placeholder="Search movie" id="search">
+
     <div id="main_content"></div>
 
     <footer>
-        <a target="_blank" href="https://github.com/splitvice/movies-interface">Source code</a> - <a href="http://split-vice.com/technology/web-software/movies-interface/" target="_blank">Movies Interface website</a><br><br>Made by SPLIT VICE - MIT License - v1.3.1
+        <a target="_blank" href="https://github.com/splitvice/movies-interface">Source code</a> - <a href="http://split-vice.com/technology/web-software/movies-interface/" target="_blank">Movies Interface website</a><br><br>Made by SPLIT VICE - MIT License - v1.4.0
     </footer>
 
     <script>

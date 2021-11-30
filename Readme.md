@@ -35,7 +35,7 @@ To configure Movies Interface open the file "config.ini" file.
 
 You will find the following code lines that you can edit:
 ```
-[ENVIROMENT]
+[ENVIRONMENT]
 MOVIES_FOLDER = './movies' // Route to videos folder.
 INDEX_TITLE = 'Movies interface' // Title that will be shown at the main page.
 BUTTON_TO_RELOAD_MOVIES_LIST_TEXT = 'Back to movies list.' // Clickable label to go back to videos list.
