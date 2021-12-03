@@ -79,10 +79,11 @@ header {
 .movie_list_box {
     background-color: rgb(255, 255, 255, 0.1);
     border-radius: 25px;
-    height: calc(100vh - 171px);
+    height: calc(100vh - 213px);
     margin: 0px 10% 0px 10%;
     overflow-y: auto;
     display: flex;
+    padding:20px;
     justify-content: space-evenly;
 }
 
@@ -102,7 +103,7 @@ header {
         font-size: 25px;
     }
     .movie_list_box {
-        height: calc(100vh - 127px);
+        height: calc(100vh - 164px);
     }
 }
 
