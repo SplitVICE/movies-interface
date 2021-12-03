@@ -37,6 +37,7 @@ video {
     }
 }
 
+/* Buttons shape change  and movie name resize */
 @media screen and (max-width:496px) {
     .watching-movie-buttons-container {
         display: flex;
@@ -58,30 +59,24 @@ video {
     }
 }
 
-@media screen and (min-width:817px) and (max-height:849px) {
+/* All screens wider than video's default scale  */
+@media screen and (min-width:818px) and (max-height:731px) {
     video {
-        width: 500px;
+        height: calc(100vh - 326px);
+        width: calc(100vh - 1px);
+    }
+}
+
+/* All screens with less width than video's default scale  */
+@media screen and (max-width:817px) and (max-height:728px) {
+    video {
+        height: calc(100vh - 326px);
+        width: 100%;
     }
 
-    @media screen and (max-height:736px) {
+    @media screen and (max-width:496px) {
         video {
-            width: 400px;
-        }
-    }
-
-    @media screen and (max-height:629px) {
-        video {
-            width: 300px;
-        }
-
-        .watching-movie-buttons-container {
-            padding-bottom: 10px;
-        }
-
-        .watching-movie-button {
-            font-size: 13px;
-            padding: 6px 8px 6px 8px;
-            border-radius: 4px;
+            height: calc(100vh - 375px);
         }
     }
 }
